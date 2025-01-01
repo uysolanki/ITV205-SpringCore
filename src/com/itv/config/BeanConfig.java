@@ -1,22 +1,24 @@
 package com.itv.config;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
 import com.itv.model.Engine;
 
 @Configuration
+@ComponentScan(basePackages="com.itv.model")
 public class BeanConfig {
 	
-	@Bean
+	@Bean(name="apple")
 	public Engine getEngineUsingConstructor()
 	{
-		Engine e1=new Engine(44, "Mahindra", 2800, 40);
-		return e1;
+		return new Engine(44, "Mahindra", 2800, 40);
+
 	}
 	
-	@Bean
+	@Bean(name="mango")
 	@Scope("prototype")
 	public Engine getEngineUsingSetter()
 	{

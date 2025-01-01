@@ -17,7 +17,7 @@ public class DriverAppClass {
 		ApplicationContext beanFactory = new AnnotationConfigApplicationContext(BeanConfig.class);
 		System.out.println("Bye");
 		
-		Engine myEngine=(Engine) beanFactory.getBean("getEngineUsingSetter");
+		Engine myEngine=(Engine) beanFactory.getBean("apple");
 		System.out.println(myEngine);
 		
 	}
