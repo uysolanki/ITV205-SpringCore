@@ -1,8 +1,10 @@
 package com.itv.app;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import com.itv.model.Car;
+import com.itv.config.BeanConfig;
+import com.itv.model.Engine;
 
 public class DriverAppClass {
 
@@ -11,9 +13,12 @@ public class DriverAppClass {
 //		Car c1=new Car(45,"Toyota", "Fortuner", 1500, e1);	
 //		System.out.println(c1);
 		
-		ClassPathXmlApplicationContext beanFactory = new ClassPathXmlApplicationContext("resources/bean-config.xml");
-		Car myCar=(Car) beanFactory.getBean("c2");
-		System.out.println(myCar);
+//		ClassPathXmlApplicationContext beanFactory = new ClassPathXmlApplicationContext("resources/bean-config.xml");
+		ApplicationContext beanFactory = new AnnotationConfigApplicationContext(BeanConfig.class);
+		System.out.println("Bye");
+		
+		Engine myEngine=(Engine) beanFactory.getBean("getEngineUsingSetter");
+		System.out.println(myEngine);
 		
 	}
 

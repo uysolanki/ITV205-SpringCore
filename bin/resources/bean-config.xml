@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<!-- <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:context="http://www.springframework.org/schema/context"
@@ -16,12 +16,12 @@
     <constructor-arg value="25"></constructor-arg>  
     </bean>
     
- <!--    <bean id="e2" class="com.itv.model.Engine" >   
+    <bean id="e2" class="com.itv.model.Engine" >   
     <constructor-arg value="20"></constructor-arg>
     <constructor-arg value="Toyota"></constructor-arg>
     <constructor-arg value="2000"></constructor-arg>
     <constructor-arg value="30"></constructor-arg>  
-    </bean> -->
+    </bean>
    
     <bean id="c1" class="com.itv.model.Car" >   
     <constructor-arg value="1"></constructor-arg>
@@ -52,4 +52,4 @@
     </bean>
     
     
-</beans>
+</beans> -->

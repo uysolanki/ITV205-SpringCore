@@ -1,5 +1,8 @@
 package com.itv.model;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Engine {
 	
 	private int engineId;
@@ -8,7 +11,7 @@ public class Engine {
 	private int engineLitre;
 	
 	
-	public Engine() {}
+	public Engine() {System.out.println("Hi");}
 	public Engine(int engineId, String engineMfgName, int engineCc, int engineLitre) {
 		
 		this.engineId = engineId;
