@@ -1,7 +1,10 @@
 package com.itv.model;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Car {
 
 	private int carId;
@@ -10,6 +13,7 @@ public class Car {
 	private int price;
 	
 	@Autowired
+	@Qualifier("mango")
 	Engine ex;
 
 	public Car() {}

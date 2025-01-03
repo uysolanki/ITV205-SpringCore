@@ -1,4 +1,4 @@
-<!-- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:context="http://www.springframework.org/schema/context"
@@ -7,9 +7,9 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
     
-    <context:annotation-config />
+    <context:annotation-config /> 
     
-    <bean id="engine" class="com.itv.model.Engine">   
+    <!-- <bean id="engine" class="com.itv.model.Engine">   
     <constructor-arg value="18"></constructor-arg>
     <constructor-arg value="Honda"></constructor-arg>
     <constructor-arg value="1500"></constructor-arg>
@@ -50,6 +50,28 @@
    </property>
    
     </bean>
+     -->
+    
+   <bean id="p1" class="com.itv.model.Player" ><!-- init-method="apple" destroy-method="mango" -->   
+   <property name="jno">
+   <value>18</value>
+   </property>
+   
+   <property name="pname">
+   <value>VK</value>
+   </property>
+   
+   <property name="mp">
+   <value>300</value>
+   </property>
+   
+   <property name="rs">
+   <value>10000</value>
+   </property>
+   
+    </bean>
     
     
-</beans> -->
+    
+    
+</beans>

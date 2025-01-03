@@ -4,7 +4,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.itv.config.BeanConfig;
-import com.itv.model.Engine;
+import com.itv.model.Car;
 
 public class DriverAppClass {
 
@@ -17,8 +17,11 @@ public class DriverAppClass {
 		ApplicationContext beanFactory = new AnnotationConfigApplicationContext(BeanConfig.class);
 		System.out.println("Bye");
 		
-		Engine myEngine=(Engine) beanFactory.getBean("apple");
-		System.out.println(myEngine);
+//		Engine myEngine=(Engine) beanFactory.getBean("apple");
+//		System.out.println(myEngine);
+		
+		Car myCar=(Car) beanFactory.getBean("banana");
+		System.out.println(myCar);
 		
 	}
 

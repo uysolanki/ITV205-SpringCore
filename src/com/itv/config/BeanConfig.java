@@ -5,6 +5,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
+import com.itv.model.Car;
 import com.itv.model.Engine;
 
 @Configuration
@@ -28,6 +29,19 @@ public class BeanConfig {
 		e1.setEngineLitre(100);
 		e1.setEngineMfgName("Volvo");
 		return e1;
+	}
+	
+	@Bean(name="banana")
+	@Scope("prototype")
+	public Car getCarUsingSetter()
+	{
+		Car c1=new Car();
+		c1.setCarId(1);
+		//c1.setEngine(getEngineUsingConstructor());
+		c1.setMfgName("Ford");
+		c1.setModelName("Accord");
+		c1.setPrice(1000);
+		return c1;
 	}
 
 
